@@ -1,4 +1,3 @@
-
 const express = require("express");
 const db = require("./database");
 
@@ -121,4 +120,6 @@ const initializeDBAndServer = async () => {
     }
 };
 
-initializeDBAndServer();
+initializeDBAndServer().then(() => {
+    console.log("Initialization completed");
+});
